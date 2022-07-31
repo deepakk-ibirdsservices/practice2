@@ -1,0 +1,62 @@
+<template>
+    <div class="container">
+        <div class="output slds-m-bottom_x-large">
+            <div class="inputContainer" style="border:1px solid #f9eaea; box-shadow: 1px 1px #f1eeee;">
+                <input type="text" class="numberInput" value={inputVal} oninput={handleInputChange}/>
+                <lightning-icon icon-name="utility:notebook" alternative-text="Note Book" size="small" class="slds-m-right_x-small pointer leftIconNoteBook"></lightning-icon>
+                <span class="pointer slds-icon_container slds-icon_container_circle slds-icon-standard-quip"
+                    title="Description of icon when needed" onclick={handleDialerClick}>
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/apexpages/slds/latest/assets/icons/action-sprite/svg/symbols.svg#dial_in"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Description of icon when needed</span>
+                </span>
+            </div>
+        </div>
+        <!-- dialer pad container-->
+        <template if:true={showDialer}>
+            <div class="row">
+                <div class="digit" onclick={handleOnClick} id="one">1</div>
+                <div class="digit" onclick={handleOnClick} id="two">2</div>
+                <div class="digit" onclick={handleOnClick} id="three">3</div>
+            </div>
+            <div class="row">
+                <div class="digit" onclick={handleOnClick} id="four">4
+                </div>
+                <div class="digit" onclick={handleOnClick} id="five">5
+                </div>
+                <div class="digit" onclick={handleOnClick}>6
+                </div>
+            </div>
+            <div class="row">
+                <div class="digit" onclick={handleOnClick}>7
+                </div>
+                <div class="digit" onclick={handleOnClick}>8
+                </div>
+                <div class="digit" onclick={handleOnClick}>9
+                </div>
+            </div>
+            <div class="row">
+                <div class="digit" onclick={handleOnClick}>*
+                </div>
+                <div class="digit" onclick={handleOnClick}>0
+                </div>
+                <div class="digit" onclick={handleOnClick}>#
+                </div>
+            </div>
+            <div class="row">
+                <div class="digit"></div>
+                <div class="digit addContactIcon">
+                    <span class="pointer slds-icon_container slds-icon_container_circle slds-icon-standard-address"
+                        title="Add Contact" onclick={handleAddUserClick}>
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#adduser"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Add Contact</span>
+                    </span>
+                </div>
+                <lightning-icon icon-name="utility:back" alternative-text="Back" size="small" onclick={handleBackClick} class="digit" ></lightning-icon>
+            </div>
+        </template>
+    </div>
+</template>

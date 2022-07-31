@@ -1,0 +1,110 @@
+* {
+   	font-family: 'OpenSansLight';
+  	font-size: 20px;
+	font-weight: bold;
+}
+@font-face {
+	/*
+		font family is used to give a name to the custom font,
+		you use this for referencing the custom font later
+	*/
+	font-family: "OpenSansLight";
+
+	/*
+		This is the location of the Custom Font, note, I have stored in a ZIP file
+	*/
+	src: url('/resource/openSansFont/OpenSans-Light.ttf');
+}
+  
+.row {
+	margin: 0 auto;
+	width: 280px;
+	clear: both;
+	text-align: center;
+	font-family: 'Exo';
+}
+
+.digit,.dig {
+	float: left;
+	padding: 12px 36px;
+	width: 30px;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.digit{
+	color:#5e5858;
+}
+
+.sub {
+	font-size: 0.8rem;
+	color: grey;
+}
+
+.container {
+	background-color: white;
+	width: 344px;
+	padding: 20px;
+	margin: 30px auto;
+	height: 420px;
+	text-align: center;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.output {
+	font-family: "Exo";
+	font-size: 2rem;
+	height: 25px;
+	font-weight: bold;
+	color: #1976d2;
+}
+
+.call {
+	display: inline-block;
+	background-color: #66bb6a;
+	padding: 4px 30px;
+	margin: 10px;
+	color: white;
+	border-radius: 4px;
+	float: left;
+	cursor: pointer;
+}
+
+.botrow {
+	margin: 0 auto;
+	width: 280px;
+	clear: both;
+	text-align: center;
+	font-family: 'Exo';
+}
+
+.digit:active,.dig:active {
+	background-color: #e6e6e6;
+}
+
+.call:hover {
+	background-color: #81c784;
+}
+
+.dig {
+	float: left;
+	padding: 10px 20px;
+	margin: 10px;
+	width: 30px;
+	cursor: pointer;
+}
+.numberInput{
+	outline: none;
+	border:none;
+}
+.redColor{
+    fill : #FF0000;
+}
+.inputContainer{
+    border:1px solid #f9eaea; box-shadow: 1px 1px #f1eeee;
+}
+.pointer{
+	cursor: pointer;
+}
+.addContactIcon{
+	padding:0px 36px;
+}
